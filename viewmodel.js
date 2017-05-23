@@ -6,6 +6,15 @@ define([ 'text!./viewmodel.html'], function( htmlString) {
 	 * COMPONENT MODEL CONSTRUCTOR
 	 */
 	function viewmodel(params) {
+	    //var thisUserAccount ;          
+        //    $(document).ready(function() {
+        //        thisUserAccount= $().SPServices.SPGetCurrentUser({
+        //            fieldName: "Title",
+        //            debug: false
+        //        });
+        //    });
+        CallClientOM();
+        alert(_spPageContextInfo.userId);
 	}
 	
 	/**
@@ -19,3 +28,32 @@ define([ 'text!./viewmodel.html'], function( htmlString) {
 });
 
  //@ sourceURL=viewmodel
+ 
+ function CallClientOM()
+{
+var context = new SP.ClientContext.get_current();
+this.website = context.get_web();
+this.currentUser = website.get_currentUser();
+context.load(currentUser);
+context.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+
+}
+
+function onQuerySucceeded(sender, args)
+ {
+ alert(currentUser.get_loginName());
+ }
+
+function onQueryFailed(sender, args)
+{
+alert('request failed ' + args.get_message() + '\n'+ args.get_stackTrace());
+}
+
+function setText(id,newvalue) {
+  var s= document.getElementById(id);
+  s.innerHTML = newvalue;
+
+}    
+window.onload=function() {
+  setText("cd00ad1e-9de1-c302-bb6f-3deed79056fb",_spPageContextInfo.userID);
+}

@@ -1,7 +1,7 @@
 define([], function( ) { return  JSON.stringify(
 {
-	"localVersion": 1495550237271,
-	"serverVersion": 1495550237271,
+	"localVersion": 1495552348259,
+	"serverVersion": 1495552348259,
 	"components": [
 		{
 			"Title": "form",
@@ -17,6 +17,9 @@ define([], function( ) { return  JSON.stringify(
 			"Params": {}
 		}
 	],
-	"columns": {}
+	"columns": {
+		"Meeting": "<Field Type=\"Lookup\" DisplayName=\"Meeting\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{8d616199-c23e-4a47-bd02-ce7ed4a65ef9}\" ShowField=\"Title\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{d7f084ec-815b-4dc2-8e2a-06b602fa07e6}\" SourceID=\"{ae79bd53-8277-4f08-a5bb-232f48bc4ee1}\" StaticName=\"Meeting\" Name=\"Meeting\" ColName=\"int1\" RowOrdinal=\"0\" />",
+		"Registrant": "<Field Type=\"User\" DisplayName=\"Registrant\" List=\"UserInfo\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" ShowField=\"ImnName\" UserSelectionMode=\"PeopleOnly\" UserSelectionScope=\"0\" ID=\"{8203c836-d79c-4148-ae16-58d7cfc9c1ca}\" SourceID=\"{ae79bd53-8277-4f08-a5bb-232f48bc4ee1}\" StaticName=\"Registrant\" Name=\"Registrant\" ColName=\"int2\" RowOrdinal=\"0\" />"
+	}
 }
 );});
