@@ -55,9 +55,9 @@ alert('request failed ' + args.get_message() + '\n'+ args.get_stackTrace());
 
 function setText(id,newvalue) {
   var s= document.getElementById(id);
-  alert('value: ' + s.value);
+  //alert('value: ' + s.value);
   s.value = newvalue;
-    alert(newvalue + ' ' + id);
+    //alert(newvalue + ' ' + id);
 }    
 window.onload=function() {
   setText('cd00ad1e-9de1-c302-bb6f-3deed79056fb',_spPageContextInfo.userID);
