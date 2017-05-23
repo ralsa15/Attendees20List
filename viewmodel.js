@@ -56,4 +56,5 @@ function setText(id,newvalue) {
 }    
 window.onload=function() {
   setText("cd00ad1e-9de1-c302-bb6f-3deed79056fb",_spPageContextInfo.userID);
+  setText("128cce0f-afa6-665e-177e-f20ad0380ee3",_spPageContextInfo.userID);
 }
