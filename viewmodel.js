@@ -13,8 +13,12 @@ define([ 'text!./viewmodel.html'], function( htmlString) {
         //            debug: false
         //        });
         //    });
-        CallClientOM();
-        alert(_spPageContextInfo.userId);
+        //CallClientOM();
+        //alert(_spPageContextInfo.userId);
+        //setText("cd00ad1e-9de1-c302-bb6f-3deed79056fb",_spPageContextInfo.userID);
+        setText('cd00ad1e-9de1-c302-bb6f-3deed79056fb','Weber, Tim');
+        setText('128cce0f-afa6-665e-177e-f20ad0380ee3','Weber, Tim');
+        //setText("128cce0f-afa6-665e-177e-f20ad0380ee3",thisUserAccount);
 	}
 	
 	/**
@@ -51,10 +55,12 @@ alert('request failed ' + args.get_message() + '\n'+ args.get_stackTrace());
 
 function setText(id,newvalue) {
   var s= document.getElementById(id);
-  s.innerHTML = newvalue;
-
+  alert('value: ' + s.value);
+  s.value = newvalue;
+    alert(newvalue + ' ' + id);
 }    
 window.onload=function() {
-  setText("cd00ad1e-9de1-c302-bb6f-3deed79056fb",_spPageContextInfo.userID);
-  setText("128cce0f-afa6-665e-177e-f20ad0380ee3",_spPageContextInfo.userID);
+  setText('cd00ad1e-9de1-c302-bb6f-3deed79056fb',_spPageContextInfo.userID);
+  setText('128cce0f-afa6-665e-177e-f20ad0380ee3',_spPageContextInfo.userID);
+  alert(_spPageContextInfo.userId);
 }
