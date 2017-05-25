@@ -52,7 +52,7 @@ define(['text!usernamebox.html'], function( htmlString) {
 		 * observable bound to UI html template to show sharepoint column's 'Value' 
 		 */
 		this.value = ko.observable().extend({ listItem: this.internalName });//.extend({ required: true }).extend({ minLength: 3 });		
-		//this.value = _spPageContextInfo.userId //
+		this.value = _spPageContextInfo.userId //
 		/**
 		 * COMPONENT VALIDATION	
 		 */
